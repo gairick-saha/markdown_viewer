@@ -74,8 +74,7 @@ class TableBuilder extends MarkdownElementBuilder {
 
       _tableStack.single.rows.add(TableRow(
         decoration: decoration,
-        // TODO(Zhiguang) Fix it.
-        children: [],
+        children: const [],
       ));
     }
   }
@@ -113,7 +112,7 @@ class TableBuilder extends MarkdownElementBuilder {
     } else if (type == 'tableHeadCell' || type == 'tableBodyCell') {
       final children = element.children;
 
-      _tableStack.single.rows.last.children!.add(
+      _tableStack.single.rows.last.children.add(
         TableCell(
           verticalAlignment: TableCellVerticalAlignment.top,
           child: Padding(
